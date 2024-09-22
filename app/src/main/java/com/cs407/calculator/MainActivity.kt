@@ -47,15 +47,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculate(text1: EditText, text2: EditText, operation: String) {
-        val num1 = text1.text.toString().toIntOrNull()
-        val num2 = text2.text.toString().toIntOrNull()
+        val num1 = text1.text.toString().toDoubleOrNull()
+        val num2 = text2.text.toString().toDoubleOrNull()
 
         if (num1 == null || num2 == null) {
             Toast.makeText(this, "Please enter valid numbers", Toast.LENGTH_SHORT).show()
             return
         }
 
-        if (operation == "divide" && num2 == 0) {
+        if (operation == "divide" && num2 == 0.0) {
             Toast.makeText(this, "Cannot divide by zero", Toast.LENGTH_SHORT).show()
             return
         }

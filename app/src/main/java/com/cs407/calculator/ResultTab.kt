@@ -17,7 +17,7 @@ class ResultTab : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val result = intent.getIntExtra("result", 0)
+        val result = intent.getDoubleExtra("result", 0.0)
         val resultTextView = findViewById<TextView>(R.id.textView2)
         resultTextView.text = result.toString()
     }
